@@ -1,29 +1,27 @@
-'use strict'
+'use strict';
 
 class LoginController {
 
-  * index(request, response) {
-    //
-  }
-
   * create(request, response) {
-    //
+    yield response.sendView('login.create');
   }
 
   * store(request, response) {
-    //
-  }
+    const { email, password } = request.all();
 
-  * show(request, response) {
-    //
-  }
+    try {
+      const validLogin = yield request.auth.attempt(email, password);
 
-  * edit(request, response) {
-    //
-  }
+      yield request.with({ sucess: 'You have logged in!' }).flash();
 
-  * update(request, response) {
-    //
+      response.redirect('/users');
+    } catch (e) {
+      yield request.withOut('password')
+      .andWith({ error: 'Credentials do not match.' })
+      .flash();
+
+      response.redirect('back');
+    }
   }
 
   * destroy(request, response) {
@@ -32,4 +30,4 @@ class LoginController {
 
 }
 
-module.exports = LoginController
+module.exports = LoginController;

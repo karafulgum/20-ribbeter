@@ -21,13 +21,13 @@
         <div class="container">
           {% if old('error') %}
             <div>
-              <p class="alert alert--danger">That username or email has already been taken.</p>
+              <p class="alert alert--danger">{{  old('error') }}</p>
             </div>
           {% endif %}
 
           {% if old('success') %}
-            <div class="alert">
-              <p class="alert--success">Your account has successfully been made.</p>
+            <div>
+              <p class="alert alert--success">{{  old('success') }}</p>
             </div>
           {% endif %}
           {% block content %}
