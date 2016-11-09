@@ -1,29 +1,24 @@
 {% extends "layout" %}
 
 {% block content %}
-{{ form.open({action: 'UserController.store'}) }}
+{{ form.open({action: 'UserController.store', class: 'form'}) }}
 
 {{ csrfField }}
-<div class="container">
-  <div class="form">
-    <h3 class="form__title">Login</h3>
+  <h3 class="form__title">Sign Up</h3>
 
-    <div class="form__group">
-     {{ form.label('email', 'Email') }}
-     {{ form.text('email', null, { class: 'form__input', placeholder: 'Email' }) }}
-     </div>
+  <div class="form__group">
+   {{ form.label('email', 'Email') }}
+   {{ form.text('email', null, { class: 'form__input', placeholder: 'Email' }) }}
+   </div>
 
-     <div class="form__group">
-     {{ form.label('password', 'Password') }}
-     {{ form.password('password', null, { class: 'form__input', placeholder: 'Password' }) }}
-     </div>
+   <div class="form__group">
+   {{ form.label('password', 'Password') }}
+   {{ form.password('password', null, { class: 'form__input', placeholder: 'Password' }) }}
+   </div>
 
-     <div class="form__btn">
-     {{ form.submit('Register', null, { class: 'form__btn--register' }) }}
-     {{ form.submit('Login', null, { class: 'form__btn--login' }) }}
-     </div>
-  </div>
- </div>
-
+   <div class="form__btn">
+   {{ form.submit('Register', null, { class: 'form__btn--register' }) }}
+   {{ form.submit('Login', null, { class: 'form__btn--login' }) }}
+   </div>
 {{ form.close() }}
 {% endblock %}

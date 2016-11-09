@@ -4,5 +4,11 @@
 
   &__content {
     flex-grow: 1;
+    padding: 1rem 2rem;
   }
+}
+
+.container {
+  max-width: $m-max-width;
+  margin: 0 auto;
 }
