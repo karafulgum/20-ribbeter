@@ -1,15 +1,10 @@
 {% extends "layout" %}
 
 {% block content %}
-{{ form.open({action: 'UserController.store', class: 'form'}) }}
+{{ form.open({action: 'LoginController.store', class: 'form'}) }}
 
 {{ csrfField }}
-  <h3 class="form__title">Create an Account</h3>
-
-  <div class="form__group">
-   {{ form.label('username', 'Username') }}
-   {{ form.text('username', null, { class: 'form__input', placeholder: 'Username' }) }}
-   </div>
+  <h3 class="form__title">Login</h3>
 
   <div class="form__group">
    {{ form.label('email', 'Email') }}
@@ -22,8 +17,8 @@
    </div>
 
    <div class="btn">
-   <a href="/login" class="btn__back">Login</a>
-   {{ form.submit('Sign Up', null, { class: 'btn__submit' }) }}
+   <a href="/register" class="btn__back">Register</a>
+   {{ form.submit('Login', null, { class: 'btn__submit' }) }}
    </div>
 {{ form.close() }}
 {% endblock %}
