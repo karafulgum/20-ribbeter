@@ -4,6 +4,8 @@ $c-secondary: #4bb5c1;
 $c-secondary-light: #7fc6bc;
 $c-white: #edf7f2;
 $c-pure-white: #fff;
+$c-danger: #d9534f;
+$c-success: #5cb85c;
 
 $m-gutter: 1rem;
 $m-max-width: 60rem;
@@ -20,3 +22,22 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'layout';
 @import './components/nav';
 @import './components/form';
+
+.alert {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: $c-white;
+
+  &--danger {
+    margin: 1rem auto;
+    background: $c-danger;
+    text-align: center;
+  }
+
+  &--success {
+    margin: 1rem auto;
+    background: $c-success;
+    text-align: center;
+  }
+}
