@@ -1,5 +1,14 @@
-$c-primary: #98c747;
-$c-white: #fff;
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7fc6bc;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+$font: 'Dosis', sans-serif;
 
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
@@ -10,5 +19,4 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'reset';
 @import 'layout';
 @import './components/nav';
-
-@import 'adonis';
+@import './components/form';

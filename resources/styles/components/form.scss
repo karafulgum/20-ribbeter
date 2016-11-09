@@ -1,0 +1,62 @@
+.container {
+  max-width: 45%;
+  margin: 2rem auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: $c-pure-white;
+
+  &__title {
+    margin: 0;
+    padding: 0.3rem;
+    background: $c-primary;
+    color: $c-white;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  &__input {
+    padding-top: 0.2rem;
+    padding-left: 0.1rem;
+    border: 0;
+    border-bottom: 0.2rem solid $c-secondary;
+    font-family: $font;
+    font-size: 0.8rem;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding: 1rem 0.5rem;
+    border-top: 0.1rem solid $c-secondary-light;
+
+    &--register {
+      padding: 0.5rem 1rem;
+      border: 0;
+      outline: 0;
+      background: $c-white;
+      color: $c-secondary-light;
+      font-family: $font;
+      font-size: 1rem;
+    }
+
+    &--login {
+      padding: 0.5rem 1rem;
+      border: 0;
+      outline: 0;
+      background: $c-primary;
+      color: $c-white;
+      font-family: $font;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,13 +1,13 @@
 .nav {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   background: $c-primary;
 
   a {
     color: $c-white;
-    font-family: 'Dosis', sans-serif;
     font-weight: bold;
     text-decoration: none;
   }
