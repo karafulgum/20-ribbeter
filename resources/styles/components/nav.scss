@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: $c-primary;
+
+  a {
+    color: $c-white;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__right-item {
+    margin-left: 0.5rem;
+  }
+}

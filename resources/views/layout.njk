@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ribbeter</title>
+  </head>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link rel="stylesheet" href="/dist/app.css">
+  <body>
+    <div class="app">
+      <div class="nav">
+        <a href="/">Ribbeter</a>
+        <ul class="nav__right">
+          <li class="nav__right-item"><a href="/">Ribbets</a> </li>
+          <li class="nav__right-item"><a href="/users">Frogs</a></li>
+          <li class="nav__right-item"><a href="/login">Login</a></li>
+        </ul>
+      </div>
+
+      <div class="app__content">
+        {% block content %}
+
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

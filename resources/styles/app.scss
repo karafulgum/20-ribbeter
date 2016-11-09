@@ -1,8 +1,14 @@
+$c-primary: #98c747;
+$c-white: #fff;
+
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome/scss/font-awesome';
 @import 'box-sizing';
+@import 'reset';
+@import 'layout';
+@import './components/nav';
 
 @import 'adonis';
