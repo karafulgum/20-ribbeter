@@ -12,7 +12,7 @@ class LoginController {
     try {
       const validLogin = yield request.auth.attempt(email, password);
 
-      yield request.with({ sucess: 'You have logged in!' }).flash();
+      yield request.with({ success: 'You have logged in!' }).flash();
 
       response.redirect('/users');
     } catch (e) {

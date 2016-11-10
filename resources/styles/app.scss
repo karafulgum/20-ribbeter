@@ -22,24 +22,29 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'box-sizing';
 @import 'reset';
 @import 'layout';
-@import './components/nav';
-@import './components/form';
+@import 'components/nav';
+@import 'components/form';
+@import 'components/grid';
 
 .alert {
-  width: 50%;
   padding: 1rem;
   border-radius: 0.4rem;
   color: $c-white;
+
 
   &--danger {
     margin: 1rem auto;
     background: $c-danger;
     text-align: center;
-  }
+   }
 
   &--success {
     margin: 1rem auto;
     background: $c-success;
     text-align: center;
   }
+}
+
+.title {
+  border-bottom: 0.1rem solid $c-secondary;
 }

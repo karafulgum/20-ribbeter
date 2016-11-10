@@ -4,6 +4,15 @@ const User = use('App/Model/User');
 const Hash = use('Hash');
 
 class UserController {
+
+  * index(request, response) {
+    const users = yield User.all();
+
+    yield response.sendView('user.index', {
+      users: users.toJSON(),
+    });
+  }
+
   * create(request, response) {
     yield response.sendView('user.create');
   }
@@ -28,7 +37,7 @@ class UserController {
     } catch (e) {
       yield request
         .withOut('password')
-        .andWith({ error: 'That email is already taken' })
+        .andWith({ error: 'That email or username is already taken' })
         .flash();
 
       response.redirect('back');

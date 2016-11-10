@@ -3,7 +3,7 @@
   min-width: 20rem;
   margin: 0 auto;
   background: $c-pure-white;
-  box-shadow: $box-shadow;
+  box-shadow: #{$box-shadow};
 
   &__title {
     margin: 0;
