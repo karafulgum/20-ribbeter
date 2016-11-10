@@ -12,3 +12,9 @@
   max-width: $m-max-width;
   margin: 1rem auto;
 }
+
+@media (max-width: 480px) {
+  .app {
+    max-width: 30rem;
+  }
+}
