@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Ribbeter</title>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/dist/app.css">
   </head>
@@ -26,13 +27,13 @@
         <div class="container">
           {% if old('error') %}
             <div>
-              <p class="alert alert--danger">{{  old('error') }}</p>
+              <p class="animated pulse alert alert--danger">{{  old('error') }}</p>
             </div>
           {% endif %}
 
           {% if old('success') %}
             <div>
-              <p class="alert alert--success">{{  old('success') }}</p>
+              <p class="animated pulse alert alert--success">{{  old('success') }}</p>
             </div>
           {% endif %}
           {% block content %}

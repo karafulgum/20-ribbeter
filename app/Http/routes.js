@@ -29,4 +29,6 @@ Route.any('/logout', 'LoginController.destroy');
 
 Route.get('/users', 'UserController.index').middleware('auth');
 
+Route.resource('/api/ribbits', 'Api/RibbitController').middleware('auth');
+
 Route.any('*').render('vue').middleware('auth');
