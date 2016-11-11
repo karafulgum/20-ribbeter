@@ -1,13 +1,13 @@
-'use strict'
+'use strict';
 
-const Lucid = use('Lucid')
+const Lucid = use('Lucid');
 
 class Ribbit extends Lucid {
 
 
-  body() {
-    return this.belongsTo('App/Model/user', 'id', 'user_id');
+  user() {
+    return this.belongsTo('App/Model/User', 'id', 'user_id');
   }
 }
 
-module.exports = Ribbit
+module.exports = Ribbit;

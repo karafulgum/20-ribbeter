@@ -5,13 +5,13 @@ const Ribbit = use('App/Model/Ribbit');
 class RibbitController {
 
   * index(request, response) {
-    const ribbits = yield Ribbit.with('body').fetch();
+    const ribbits = yield Ribbit.with('user').fetch();
 
     response.send(ribbits);
   }
 
   * store(request, response) {
-    const input = request.only('user_id', 'body');
+    const input = request.all();
     const { id } = request.currentUser;
 
     const ribbit = yield Ribbit.create({
@@ -19,12 +19,14 @@ class RibbitController {
       body: input.body,
     });
 
+    yield ribbit.related('user').load();
+
     response.send(ribbit);
   }
 
   * show(request, response) {
     const id = request.param('id');
-    const ribbit = yield Ribbit.with('body').where({ id }).firstOrFail();
+    const ribbit = yield Ribbit.with('user').where({ id }).firstOrFail();
 
     response.send(ribbit);
   }
@@ -33,7 +35,7 @@ class RibbitController {
     const input = request.only('user_id', 'body');
     const id = request.param('id');
 
-    const ribbit = yield Ribbit.with('body').where({ id }).firstOrFail();
+    const ribbit = yield Ribbit.with('user').where({ id }).firstOrFail();
     ribbit.fill(input);
     yield ribbit.save(input);
 
