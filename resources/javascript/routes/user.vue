@@ -11,8 +11,8 @@
       </div>
 
       <div class="ribbit-grid__item ribbit-grid__item--main">
-        <div class="card" v-for="item in ribbits">
-          <p class="card__title">${{ item.user.username }}</p>
+        <div class="card" >
+          <p class="card__title">${{ $route.params.username }}</p>
           <div class="card__content--btn">
             <button href="/app" class="card-btn__back card-btn__back--full" @click="getData">Load New Ribbits</button>
           </div>

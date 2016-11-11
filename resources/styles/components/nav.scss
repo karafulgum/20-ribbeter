@@ -12,6 +12,11 @@
     text-decoration: none;
   }
 
+  &__title {
+    color: $c-white;
+    font-weight: bold;
+  }
+
   &__right {
     display: flex;
     flex-direction: row;
