@@ -1,6 +1,14 @@
 <template lang="html">
   <div class="">
-    <h2>Home Page</h2>
+    <h2 class="title">Welcome To Ribbiter!</h2>
+
+    <form class="app-form" method="post">
+      <h3 class="app-form__title">Let's Get Started!</h3>
+      <div class="app-btn">
+        <a href="/login" class="app-btn__back">Login</a>
+        <a href="/register" class="app-btn__submit">Sign Up</a>
+      </div>
+    </form>
   </div>
 </template>
 
