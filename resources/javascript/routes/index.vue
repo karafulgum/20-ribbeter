@@ -6,14 +6,14 @@
         <div class="card">
           <p class="card__title">New Ribbit</p>
           <div class="card__content">
-            <form>
+            <form @submit.prevent="submitRibbit">
               <label class="card__header" for="ribbit-post">What's Going On?</label>
               <textarea rows="8" class="card__input" id="ribbit-post"></textarea>
             </form>
         </div>
         <div class="card-btn">
-          <a href="#" class="card-btn__back">Clear</a>
-          <a href="#" class="card-btn__submit">Save</a>
+          <button class="card-btn__back">Clear</button>
+          <button class="card-btn__submit">Save</button>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
           </div>
           <div class="card__row">
             <h3 class="card__username">$karafulgum</h3>
-            <p class="card__text">What the user inputted goes here</p>
+            <p class="card__body">What the user inputted goes here</p>
           </div>
         </div>
       </div>
@@ -39,11 +39,19 @@
 export default {
   data() {
     return {
+      formValues: {},
     };
   },
 
   methods: {
-
+    submitRibbit(formValues) {
+      fetch(`/api/ribbits`, {
+        credentials: 'same-origin',
+        method: 'POST'.
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(this.formValues)
+      })
+    }
   },
 };
 </script>

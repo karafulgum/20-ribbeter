@@ -12,7 +12,12 @@ class RibbitController {
 
   * store(request, response) {
     const input = request.only('user_id', 'body');
-    const ribbit = yield Ribbit.create(input);
+    const { id } = request.currentUser;
+
+    const ribbit = yield Ribbit.create({
+      user_id: id,
+      body: input.body,
+    });
 
     response.send(ribbit);
   }
