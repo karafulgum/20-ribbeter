@@ -76,5 +76,11 @@
     color: $c-white;
     font: inherit;
     text-decoration: none;
+
+    &--full {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
   }
 }

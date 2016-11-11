@@ -4,23 +4,15 @@
     <div class="ribbit-grid">
       <div class="ribbit-grid__item ribbit-grid__item--sidebar">
         <div class="card">
-          <form @submit.prevent="submitRibbit">
-            <p class="card__title">New Ribbit</p>
-            <div class="card__content">
-                <label class="card__header" for="ribbit-post">What's Going On?</label>
-                <textarea rows="8" class="card__input" id="ribbit-post" v-model="formValues.body"></textarea>
-            </div>
-            <div class="card-btn">
-              <a class="card-btn__back" @click="reset">Clear</a>
-              <button class="card-btn__submit">Save</button>
-            </div>
-          </form>
+          <div class="card__content--btn">
+            <a href="/app" class="card-btn__submit card-btn__submit--full">See All Ribbits</a>
+          </div>
         </div>
       </div>
 
       <div class="ribbit-grid__item ribbit-grid__item--main">
-        <div class="card">
-          <p class="card__title">See What's Happening</p>
+        <div class="card" v-for="item in ribbits">
+          <p class="card__title">${{ item.user.username }}</p>
           <div class="card__content--btn">
             <button href="/app" class="card-btn__back card-btn__back--full" @click="getData">Load New Ribbits</button>
           </div>
@@ -49,8 +41,8 @@ export default {
   },
 
   methods: {
-    getData() {
-      fetch('/api/ribbits', {
+    getData(username) {
+      fetch(`/api/ribbits?user=${this.$route.params.username}`, {
         credentials: 'same-origin',
       })
       .then((r) => r.json())
@@ -58,23 +50,6 @@ export default {
         this.ribbits = ribbits;
       });
     },
-    submitRibbit(formValues) {
-      fetch('/api/ribbits', {
-        credentials: 'same-origin',
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(this.formValues),
-      })
-      .then((r) => r.json())
-      .then((ribbit) => {
-        this.ribbits = [ribbit, ...this.ribbits];
-        this.reset();
-      });
-    },
-
-    reset() {
-      this.formValues = {};
-    }
   },
 };
 </script>
