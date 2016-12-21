@@ -48,7 +48,7 @@ module.exports = {
   mysql: {
     client: 'mysql',
     connection: {
-      host: 'http://kf-ribbiter.herokuapp.com',
+      host: Env.get('DB_HOST', 'http://kf-ribbiter.herokuapp.com'),
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
       database: Env.get('DB_DATABASE', 'adonis'),
@@ -68,7 +68,7 @@ module.exports = {
   pg: {
     client: 'pg',
     connection: {
-      host: 'http://kf-ribbiter.herokuapp.com',
+      host: Env.get('DB_HOST', 'http://kf-ribbiter.herokuapp.com'),
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
       database: Env.get('DB_DATABASE', 'adonis'),
