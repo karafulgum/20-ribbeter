@@ -1,8 +1,53 @@
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7fc6bc;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+$c-danger: #d9534f;
+$c-success: #5cb85c;
+
+$box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+$font: 'Dosis', sans-serif;
+
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-@import 'font-awesome/scss/font-awesome';
+@import 'scss/font-awesome';
 @import 'box-sizing';
+@import 'reset';
+@import 'layout';
+@import 'components/nav';
+@import 'components/form';
+@import 'components/grid';
+@import 'components/app-form';
+@import 'components/ribbit-grid';
+@import 'components/card';
 
-@import 'adonis';
+.alert {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: $c-white;
+
+
+  &--danger {
+    margin: 1rem auto;
+    background: $c-danger;
+    text-align: center;
+   }
+
+  &--success {
+    margin: 1rem auto;
+    background: $c-success;
+    text-align: center;
+  }
+}
+
+.title {
+  border-bottom: 0.1rem solid $c-secondary;
+}

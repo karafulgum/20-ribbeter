@@ -1,0 +1,90 @@
+.card {
+  background: $c-pure-white;
+  box-shadow: $box-shadow;
+
+  &__title {
+    margin: 0;
+    padding: 0.3rem;
+    background: $c-primary;
+    color: $c-white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__content {
+    padding: 0.5rem 0.5rem 0;
+
+    &--btn {
+      padding: 0.5rem;
+    }
+  }
+
+
+  &__input {
+    width: 100%;
+    border: 0;
+    border-bottom: 0.3rem solid $c-secondary;
+    outline: 0;
+    background: $c-white;
+
+    &:focus {
+      border-bottom: 0.3rem solid $c-primary;
+    }
+  }
+
+  &__row {
+    padding: 1rem 0.5rem;
+    border-top: 0.1rem solid $c-secondary-light;
+  }
+
+  &__username {
+    margin: 0;
+    color: $c-secondary-light;
+    font-weight: 800;
+    text-decoration: underline;
+  }
+
+  &__body {
+    margin-bottom: 0;
+  }
+}
+
+.card-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 1rem 0.5rem;
+  border-top: 0.1rem solid $c-secondary-light;
+
+  &__back {
+    padding: 0.5rem 1rem;
+    border: 0;
+    outline: 0;
+    background: $c-white;
+    color: $c-secondary-light;
+    font: inherit;
+    text-decoration: none;
+
+    &--full {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__submit {
+    padding: 0.5rem 1rem;
+    border: 0;
+    outline: 0;
+    background: $c-primary;
+    color: $c-white;
+    font: inherit;
+    text-decoration: none;
+
+    &--full {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

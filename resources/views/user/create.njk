@@ -1,0 +1,29 @@
+{% extends "layout" %}
+
+{% block content %}
+{{ form.open({action: 'UserController.store', class: 'form'}) }}
+
+{{ csrfField }}
+  <h3 class="form__title">Create an Account</h3>
+
+  <div class="form__group">
+   {{ form.label('username', 'Username') }}
+   {{ form.text('username', null, { class: 'form__input', placeholder: 'Username' }) }}
+   </div>
+
+  <div class="form__group">
+   {{ form.label('email', 'Email') }}
+   {{ form.text('email', null, { class: 'form__input', placeholder: 'Email' }) }}
+   </div>
+
+   <div class="form__group">
+   {{ form.label('password', 'Password') }}
+   {{ form.password('password', null, { class: 'form__input', placeholder: 'Password' }) }}
+   </div>
+
+   <div class="btn">
+   <a href="/login" class="btn__back">Login</a>
+   {{ form.submit('Sign Up', null, { class: 'btn__submit' }) }}
+   </div>
+{{ form.close() }}
+{% endblock %}

@@ -1,0 +1,22 @@
+.ribbit-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  &__item {
+    flex-basis: calc(100% / 3 - 1rem - 1rem);
+    margin: 1rem;
+
+    &--main {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .ribbit-grid {
+    &__item {
+      flex-basis: calc(100% / 1 - 1rem);
+    }
+  }
+}

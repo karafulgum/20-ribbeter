@@ -1,0 +1,39 @@
+.app-form {
+  min-width: 15rem;
+  margin: 0 auto;
+  background: $c-pure-white;
+  box-shadow: #{$box-shadow};
+
+  &__title {
+    margin: 0;
+    padding: 0.3rem;
+    background: $c-primary;
+    color: $c-white;
+  }
+}
+
+.app-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+
+  &__back {
+    padding: 0.5rem 1rem;
+    border: 0;
+    outline: 0;
+    background: $c-white;
+    color: $c-secondary-light;
+    font: inherit;
+    text-decoration: none;
+  }
+
+  &__submit {
+    padding: 0.5rem 1rem;
+    border: 0;
+    outline: 0;
+    background: $c-primary;
+    color: $c-white;
+    font: inherit;
+    text-decoration: none;
+  }
+}

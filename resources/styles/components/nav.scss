@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  background: $c-primary;
+
+  a {
+    color: $c-white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__title {
+    color: $c-white;
+    font-weight: bold;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__right-item {
+    margin-left: 0.5rem;
+  }
+}
