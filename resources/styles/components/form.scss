@@ -37,6 +37,7 @@
   margin-top: 0.5rem;
   padding: 1rem 0.5rem;
   border-top: 0.1rem solid $c-secondary-light;
+  cursor: pointer;
 
   &__back {
     padding: 0.5rem 1rem;
@@ -46,6 +47,7 @@
     color: $c-secondary-light;
     font: inherit;
     text-decoration: none;
+    cursor: pointer;
   }
 
   &__submit {
@@ -56,5 +58,6 @@
     color: $c-white;
     font: inherit;
     text-decoration: none;
+    cursor: pointer;
   }
 }
