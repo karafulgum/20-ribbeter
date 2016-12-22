@@ -33,14 +33,25 @@ module.exports = {
       filename: Helpers.databasePath('development.sqlite'),
     },
     useNullAsDefault: true,
+<<<<<<< HEAD
+=======
+  },
+
+  testing: {
+    client: 'sqlite3',
+    connection: {
+      filename: Helpers.databasePath('testing.sqlite'),
+    },
+    useNullAsDefault: true,
+>>>>>>> develop
   },
 
   /*
   |--------------------------------------------------------------------------
-  | MySQL
+  | Mysql
   |--------------------------------------------------------------------------
   |
-  | Here we define connection settings for MySQL database.
+  | Here we define connection settings for Mysql database.
   |
   | npm i --save mysql
   |
@@ -60,19 +71,28 @@ module.exports = {
   | PostgreSQL
   |--------------------------------------------------------------------------
   |
-  | Here we define connection settings for PostgreSQL database.
+  | Here we define connection settings for Mysql database.
   |
   | npm i --save pg
   |
   */
   pg: {
     client: 'pg',
+<<<<<<< HEAD
     connection: {
       host: Env.get('DB_HOST', 'http://kf-ribbiter.herokuapp.com'),
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
       database: Env.get('DB_DATABASE', 'adonis'),
     },
+=======
+    connection: Env.get('DATABASE_URL', {
+      host: Env.get('DB_HOST', 'localhost'),
+      user: Env.get('DB_USER', 'root'),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis'),
+    }),
+>>>>>>> develop
   },
 
 };

@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem 0.5rem;
+  cursor: pointer;
 
   &__back {
     padding: 0.5rem 1rem;
@@ -25,6 +26,7 @@
     color: $c-secondary-light;
     font: inherit;
     text-decoration: none;
+    cursor: pointer;
   }
 
   &__submit {
@@ -35,5 +37,6 @@
     color: $c-white;
     font: inherit;
     text-decoration: none;
+    cursor: pointer;
   }
 }
